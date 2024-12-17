@@ -1,4 +1,5 @@
 from income import get_income, taxable_income
+from tax_rates import calculate_tax
 
 # loop that prints out user's input, and only continues if all entered information is correct
 while True: 
@@ -30,3 +31,13 @@ while True:
 taxable_income = taxable_income(user_data)
 for key, value in taxable_income.items():
   print(f"{key}: ${value:.2f}")
+
+taxable_income = int(taxable_income["Annual Total Taxable Income"])
+tax_calculated = calculate_tax(taxable_income)
+
+print('\n')
+
+for key, value in tax_calculated.items():
+  print(f"{key}: ${value:.2f}")
+
+print('\n')

@@ -18,5 +18,5 @@ def taxable_income(user_data):
   month_investment_income = user_data["Monthly Investment Income"]
   month_investment_month = user_data["Estimated Months of Investment Income"]
   total_taxable_income = (week_salary * week_salary_weeks) + (month_investment_income * month_investment_month)
-  return {"Your Annual Total Taxable Income": total_taxable_income}
+  return {"Annual Total Taxable Income": total_taxable_income}
 
